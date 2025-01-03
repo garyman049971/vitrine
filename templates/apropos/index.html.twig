@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}À propos de {{ nom_entreprise }}{% endblock %}
+
+{% block body %}
+
+<div class="clearfix">
+<img src="{{ asset('build/img/apropos-1.jpg') }}" width="600" height="500" class="col-md-6 float-md-end mb-3 ms-md-3 img_hero" alt="...">
+
+<h1>À propos de {{ nom_entreprise }}</h1>
+
+<p>
+    est une jeune entreprise qui vous proposent une large 
+                gamme de diffuseurs d’huiles essentielles de haute qualité,
+                soigneusement sélectionnés pour leurs propriétés aromatiques et 
+                thérapeutiques.<br>Notre mission est de vous offrir une expérience olfactif unique et bienfaisante, en vous permettant de profiter des bienfaits des huiles essentielles dans votre quotidien. Nous sommes convaincus que l’aromathérapie peut améliorer votre bien-être physique et émotionnel, et nous sommes là pour vous guider dans la découverte de ses multiples vertus.</p>
+
+                <h2>Nos engagements</h2>
+
+                <ul>
+                    <li>Des produits de qualité</li>
+                    <li>Un service client irréprochable</li>
+                    <li>Le respect de l'environnement</li>
+                </ul>
+
+                
+
+</div>
+
+    {# <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>À propos de {{ nom_entreprise }}</h1>
+
+                <p>Orpur est une jeune entreprise qui vous proposent une large 
+                gamme de diffuseurs d’huiles essentielles de haute qualité,
+                soigneusement sélectionnés pour leurs propriétés aromatiques et 
+                thérapeutiques.<br>Notre mission est de vous offrir une expérience olfactif unique et bienfaisante, en vous permettant de profiter des bienfaits des huiles essentielles dans votre quotidien. Nous sommes convaincus que l’aromathérapie peut améliorer votre bien-être physique et émotionnel, et nous sommes là pour vous guider dans la découverte de ses multiples vertus.</p>
+
+                <h2>Nos engagements</h2>
+
+                <ul>
+                    <li>Des produits de qualité</li>
+                    <li>Un service client irréprochable</li>
+                    <li>Le respect de l'environnement</li>
+                </ul>
+
+                <h2>Notre équipe</h2>
+
+                <p>Présentez les membres de votre équipe (avec photos si possible).</p>
+
+            </div>
+        </div>
+    </div> #}
+
+{% endblock %}

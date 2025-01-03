@@ -1,0 +1,65 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: peachpuff;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    width: 100vw;
+}
+
+.img_hero{
+    margin-top: 1em;
+}
+
+.h1{
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.subHero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.bouton001{
+    margin-bottom: 1em;
+}
+
+.tof{
+    border: 1px  solid black;
+    height: auto;
+    width: auto;
+box-shadow: 1px 1px  26px rgba(76, 75, 75, 0.5);
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+}
+
+footer{
+    background-color: white;
+    height: 25vh;
+    width: 100vw;
+}
+
+.foot{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.icone_reseaux{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
