@@ -7,8 +7,8 @@
         
         {% block stylesheets %}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{ asset('build/css/home.css') }}">
         <link rel="stylesheet" href="{{ asset('build/css/apropos.css') }}">
+        <link rel="stylesheet" href="{{ asset('build/css/produits.css') }}">
         {% endblock %}
 
         {% block javascripts %}
@@ -17,14 +17,18 @@
         {% endblock %}
     </head>
     <body>
+
+
+
+
     {% block header %}
-        <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid">
-        <img class='logo' "img-fluid" src="{{ asset('build/img/logo-example.jpg') }}" width="130" height="130" alt="logo">
+    <nav class=" navbar navbar-expand-lg bg-body-tertiary container-fluid">
+        <img class= "logo img-fluid"  src="{{ asset('build/img/logo-example.jpg') }}" alt="logo">
         <div class="container-md">
-            <a class="navbar-brand" href="{{ path('app_acceuil') }}">Acceuil</a>
-            <a class="navbar-brand" href="{{ path('app_produits') }}">Nos Produits</a>
-            <a class="navbar-brand" href="{{ path('app_contact_index') }}">Contact</a>
-            <a class="navbar-brand" href="{{ path('app_apropos') }}">A propos</a>
+            <a class="navbar-brand nav_a" href="{{ path('app_acceuil') }}">Acceuil</a>
+            <a class="navbar-brand nav_a" href="{{ path('app_produit_index') }}">Nos Produits</a>
+            <a class="navbar-brand nav_a" href="{{ path('app_contact_new') }}">Contact</a>
+            <a class="navbar-brand nav_a" href="{{ path('app_apropos') }}">A propos</a>
         </div>
     </nav>
     {% endblock %}
@@ -32,64 +36,283 @@
 
         {% block body %}
 
+        <header class="container header ">
+        
 
+        <div class="container_text container text-center">
+            <h1 class="text-center mt-5 text titre">Bienvenue chez Zen & Aroma :</h1> 
+        <h2 class="text-center lead text titre">Votre solution de Bien-etre en Guadeloupe</h2>
+        </div>
+        
+    </header>
+
+
+    <main class="main-light">
+
+        <section class="container-fluid text-center">
+            
+            
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <p class="text_hero container-fluid">Bienvenue dans l'univers apaisant de Zen & Aroma, où la nature et le bien-être se rencontrent pour créer 
+                        une harmonie parfaite. Nous sommes passionnés par l'idée de vous offrir des produits naturels et authentiques, conçus pour vous accompagner 
+                        dans votre quête d'équilibre et de sérénité.
+                        </p>
+                    </div>
+                    <div class="col col2">
+                        <img src="{{ asset('build/img/home-hero2.jpg') }}" class="rounded float-end img-fluid img" alt="...">
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="container mt-5 services">
+            <h2 class="text-center text titre">Nos services Bien-etre : Une expérience sur mesure</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card1">
+                        <div class="card-body">
+                            <h3 class="card-title">Conseils personnalisés</h3>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Avec WeDrivus, louez un véhicule à tout moment, sans passer par une agence.</h6>
+                            <ul class=" list-group list-group-flush ">
+                                <li class="list-group-item">Un personnel qualifié peut fournir des conseils individualisés sur les produits les mieux adaptés aux besoins de chaque client.</li>
+                                <li class="list-group-item">Flexibilité totale : Disponible 24/7, parfait pour les déplacements spontanés.</li>
+                                <li class="list-group-item">Praticité : Une solution rapide,sans contrainte administrative.</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card1">
+                        <div class="card-body">
+                            <h3 class="card-title">Ateliers et cours de bien-être</h3>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Des ateliers thématiques peuvent être organisés pour enseigner aux clients comment:</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">utiliser les huiles essentielles, fabriquer des produits de soins naturels.</li>
+                                <li class="list-group-item">pratiquer la méditation et le yoga.</li>
+                            </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card1">
+                        <div class="card-body">
+                            <h3 class="card-title">Programme de fidélité et sytème de parrainage</h3>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Nous avons misen place un programme de fidélité récompensant les clients réguliers avec des réductions, des cadeaux ou des avantages exclusifs.</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Faites partie d’une communauté engagée et économisez sur vos achats.</li>
+                                <li class="list-group-item">Parrainez une personne pour la faire profités de Bonus</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card1">
+                        <div class="card-body">
+                            <h3 class="card-title">Coffrets cadeaux personnalisés</h3>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Car en plus de vous faire plaisir,faite plaisir a vos proches</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"> Des coffrets cadeaux sur mesure pour différentes occasions (anniversaires, fêtes, événements d'entreprise) pour répondre aux besoins spécifiques de vos proches. </li>
+                                <li class="list-group-item">Ces coffrets peuvent inclure une sélection de produits de la boutique, des conseils personnalisés, et des messages personnalisés.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid mt-5 text-center section_local">
+            <h1 class="text-center mt-5 text titre">Emplacement de nos boutiques : Une présence locale adaptée en Guadeloupe </h1>
+            <p class="text-center">Zen & Aroma est fier de vous offrir une accessibilité optimale grâce à ses nombreuses
+                boutiques dans toutes la guadeloupe:</p>
+
+                <div class="container container_list">
+                    <ul class="list-group list-group-horizontal-md list_local">
+                        <li class="list-group-item">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                                                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                                        </svg>Pointe-à-Pitre :</li>
+                        <li class="list-group-item">Le cœur vibrant de la Guadeloupe, idéal pour vos besoins urbains.</li>
+                    </ul>
+                    <ul class="list-group list-group-horizontal-md list_local">
+                        <li class="list-group-item">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                                                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                                        </svg>Basse-Terre :</li>
+                        <li class="list-group-item">Parfait pour explorer le centre spatial et ses environs.</li>
+                    </ul>
+                    <ul class="list-group list-group-horizontal-md list_local">
+                        <li class="list-group-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                          </svg>Saint-François :</li>
+                        <li class="list-group-item"> Une porte d’entrée vers les richesses culturelles
+                            de l’Ouest</li>
+                    </ul>
+                    <ul class="list-group list-group-horizontal-md list_local">
+                        <li class="list-group-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                          </svg>Petit-Bourg :</li>
+                        <li class="list-group-item"> Un point stratégique pour vos escapades plus paisibles.</li>
+                    </ul>
+                </div>
+
+                <p class="text-center">Nos points de service vous permettent de louer et restituer facilement votre véhicule, où que vous soyez en Guyane.</p>
+    
+        </section>
+
+        <section class="container text-center ">
+            <h2 class="text-center text titre">Nos produits les plus vendues</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center mb-3 card2">
+                        <div class="card-body">
+                            <h3 class="card-title">Crèmes</h3>
+                            <p class="card-text">À partir de 10€</p>
+                            <img class="img_offres img-fluid" src="{{ asset('build/img/prod-creme.jpg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center mb-3 card2">
+                        <div class="card-body">
+                            <h3 class="card-title">Bougies Parfumée</h3>
+                            <p class="card-text">À partir de 7€ </p>
+                            <img class="img_offres img-fluid" src="{{ asset('build/img/prod-bougie.jpg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center mb-3 card2">
+                        <div class="card-body">
+                            <h3 class="card-title">Diffuseurs</h3>
+                            <p class="card-text">À partir de 50€ </p>
+                            <img class="img_offres img-fluid" src="{{ asset('build/img/prod-diffuseur.jpg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="container mt-5">
+            <h2 class="text-center text titre">Comment ça marche ?</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card4">
+                        <div class="card-body">
+                            <h3 class="card-title">Réservez en ligne</h3>
+                            <p class="card-text">Choisissez votre service et votre véhicule sur notre site ou notre application. </p>
+                            <img class="img_why" src="{{ asset('build/img/online.png') }}"  alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card4">
+                        <div class="card-body">
+                            <h3 class="card-title">Prenez le volant</h3>
+                            <p class="card-text">Récupérez le véhicule à l’un de nos points ou auprès d’un particulier.</p>
+                            <img class="img_why"  src="{{ asset('build/img/volant.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card4">
+                        <div class="card-body">
+                            <h3 class="card-title">Roulez en toute sérénité</h3>
+                            <p class="card-text">Profitez d’un véhicule fiable et entretenu pour vos
+                                déplacements.</p>
+                                <img class="img_why" src="{{ asset('build/img/sereniter.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card4">
+                        <div class="card-body">
+                            <h3 class="card-title">Restituez facilement</h3>
+                            <p class="card-text">Déposez le véhicule au point convenu, en toute simplicité.</p>
+                            <img class="img_why" src="{{ asset('build/img/restituer.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="container mt-5">
+            <h2 class="text-center text">Ce que disent nos clients</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card text-center mb-3">
+                        <div class="card-body">
+                            <p class="card-text">"Excellent service ! Voiture impeccable et personnel très sympathique. Je recommande vivement WeDriveUs."</p>
+                            <p class="card-text"> - Jean</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-center mb-3">
+                        <div class="card-body">
+                            <p class="card-text">"J'ai loué une voiture familiale pour mes vacances en Guyane. La réservation en ligne était très facile et le prix était très compétitif."</p>
+                            <p class="card-text"> - Marie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mt-5 end">
+            <h1 class="text-center mt-5 text titre">Prêt à prendre la route avec WeDrivUs ?</h1> 
+        <p class="text-center lead text ">N’attendez plus pour découvrir la liberté de mouvement que WeDrivus peut vous
+            offrir. Que ce soit pour une escapade rapide, un besoin professionnel ou des vacances
+            en Guyane, WeDrivus est votre solution idéale. <br>
+            Avec WeDrivus, partez à la découverte des paysages uniques, de la faune exotique et de la flore typique de la Guyane. Profitez d’une mobilité simple et pratique pour explorer tout ce que ce territoire exceptionnel a à offrir. 
+            <br>
+            Réservez dès maintenant et vivez une expérience de location fluide, rapide et sans contrainte.
+        </p>
+
+        
+        </section>
+
+
+        <div class="text-center mt-5 bouton_container1 ">
+
+        </div>
+        <div class="text-center mt-5  bouton_container2">
+            <button type="button" class="btn btn-info text-light bouton_co" onclick="window.location.href = 'https://rentalys247.com/';">Contacter-nous !</button>
+        </div>
+
+    </main>
 
         {% endblock %}
+
+
 
         {% block footer %}
-            <footer>
-    <div class="footer container-fluid">
-        <div class="row foot">
-            <div class="col-md-4">
-                <h3>Horaires d'ouverture</h3>
-                    <ul>
-                        <li>Lundi - Mardi - Jeudi: 9h00 - 18h00</li>
-                        <li>Mercredi - Vendredi: 9h00 - 15h00</li>
-                        <li>Samedi - Dimanche: Fermé</li>
-                    </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Liens utiles</h3>
-                    <ul>
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">Nos produits</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">A propos</a></li>
-                    </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Contactez-nous</h3>
-                    <p>
-                        1417 Chemin de Daubin<br>
-                        0690 21 96 47<br>
-                        Oprure@contact.fr
-                    </p>
-                    <div class="icone_reseaux">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                            </svg>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                            </svg>
+        
+    <footer class="bg-info text-light text-center py-3 mt-5 container_footer">
+        <p>&copy; 2025 WeDriveUs</p>
+        <p>
+            <a href="{{ path('app_contact_new') }}" class="text-light">Contactez-Nous</a> | 
+            <a href="{{ path('app_apropos') }}" class="text-light">A propos</a>
+        </p>
+    </footer>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                            </svg>
-                    </div>
-                    
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="copyright">Copyright &copy; 2025 - Orpure</p>
-            </div>
-        </div>
-    </div>
-</footer>
         {% endblock %}
 
-
+    
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>

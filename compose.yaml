@@ -7,15 +7,16 @@ services:
       MERCURE_PUBLISHER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
       MERCURE_SUBSCRIBER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
       # Run "composer require symfony/orm-pack" to install and configure Doctrine ORM
-      DATABASE_URL: mysql://${MYSQL_USER:-app}:${MYSQL_PASSWORD:-!ChangeMe!}@database:3306/${MYSQL_DATABASE:-app}?serverVersion=${MYSQL_VERSION:-8}&charset=${MYSQL_CHARSET:-utf8mb4}
+      DATABASE_URL: ${DATABASE_URL}
+      # mysql://${MYSQL_USER:-app}:${MYSQL_PASSWORD:-!ChangeMe!}@database:3306/${MYSQL_DATABASE:-app}?serverVersion=${MYSQL_VERSION:-8}&charset=${MYSQL_CHARSET:-utf8mb4}
 
       # Run "composer require symfony/mercure-bundle" to install and configure the Mercure integration
       MERCURE_URL: ${CADDY_MERCURE_URL:-http://php/.well-known/mercure}
       MERCURE_PUBLIC_URL: ${CADDY_MERCURE_PUBLIC_URL:-https://${SERVER_NAME:-localhost}/.well-known/mercure}
       MERCURE_JWT_SECRET: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
       # The two next lines can be removed after initial installation
-      SYMFONY_VERSION: ${SYMFONY_VERSION:-}
-      STABILITY: ${STABILITY:-stable}
+      # SYMFONY_VERSION: ${SYMFONY_VERSION:-}
+      # STABILITY: ${STABILITY:-stable}
     volumes:
       - caddy_data:/data
       - caddy_config:/config
@@ -35,18 +36,18 @@ services:
 
 # Mercure is installed as a Caddy module, prevent the Flex recipe from installing another service
 ###> symfony/mercure-bundle ###
-  phpmyadmin:
-    container_name: "phpmyadmin"
-    image: phpmyadmin:5.2.1
-    environment:
-      PMA_HOST: "database"
-      PMA_PORT: "3306"
-      PMA_USER: "app"
-      PMA_PASSWORD: "app"
-    ports:
-      - "81:80"
-    depends_on:
-      - database
+  # phpmyadmin:
+  #   container_name: "phpmyadmin"
+  #   image: phpmyadmin:5.2.1
+  #   environment:
+  #     PMA_HOST: "database"
+  #     PMA_PORT: "3306"
+  #     PMA_USER: "app"
+  #     PMA_PASSWORD: "app"
+  #   ports:
+  #     - "81:80"
+  #   depends_on:
+  #     - database
 ###< symfony/mercure-bundle ###
 
 ###> doctrine/doctrine-bundle ###
@@ -55,9 +56,10 @@ services:
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE:-app}
       # You should definitely change the password in production
-      MYSQL_RANDOM_ROOT_PASSWORD: "true"
+      # MYSQL_RANDOM_ROOT_PASSWORD: "true"
+      MYSQL_ROOT_PASSWORD: "root"
       MYSQL_PASSWORD: ${MYSQL_PASSWORD:-app}
-      MYSQL_USER: ${MYSQL_USER:-app1}
+      MYSQL_USER: ${MYSQL_USER:-app}
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
       timeout: 5s

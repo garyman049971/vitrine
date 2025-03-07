@@ -28,6 +28,9 @@ class Contact
     #[ORM\Column(length: 255)]
     private ?string $Message = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $Email = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -89,6 +92,18 @@ class Contact
     public function setMessage(string $Message): static
     {
         $this->Message = $Message;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->Email;
+    }
+
+    public function setEmail(string $Email): static
+    {
+        $this->Email = $Email;
 
         return $this;
     }
