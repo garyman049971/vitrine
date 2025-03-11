@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Zen & Aroma{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         
         {% block stylesheets %}
@@ -22,13 +22,13 @@
 
 
     {% block header %}
-    <nav class=" navbar navbar-expand-lg bg-body-tertiary container-fluid">
+    <nav class="bg-info navbar navbar-expand-lg  container-fluid">
         <img class= "logo img-fluid"  src="{{ asset('build/img/logo-example.jpg') }}" alt="logo">
         <div class="container-md">
-            <a class="navbar-brand nav_a" href="{{ path('app_acceuil') }}">Acceuil</a>
-            <a class="navbar-brand nav_a" href="{{ path('app_produit_index') }}">Nos Produits</a>
-            <a class="navbar-brand nav_a" href="{{ path('app_contact_new') }}">Contact</a>
-            <a class="navbar-brand nav_a" href="{{ path('app_apropos') }}">A propos</a>
+            <a class="navbar-brand nav_a text-light" href="{{ path('app_acceuil') }}">Acceuil</a>
+            <a class="navbar-brand nav_a text-light" href="{{ path('app_produit_index') }}">Nos Produits</a>
+            <a class="navbar-brand nav_a text-light" href="{{ path('app_contact_new') }}">Contact</a>
+            <a class="navbar-brand nav_a text-light" href="{{ path('app_apropos') }}">A propos</a>
         </div>
     </nav>
     {% endblock %}
@@ -105,7 +105,7 @@
                 <div class="col-md-3">
                     <div class="card text-center mb-3 card1">
                         <div class="card-body">
-                            <h3 class="card-title">Programme de fidélité et sytème de parrainage</h3>
+                            <h3 class="card-title">Programme de fidélité </h3>
                             <h6 class="card-subtitle mb-2 text-body-secondary">Nous avons misen place un programme de fidélité récompensant les clients réguliers avec des réductions, des cadeaux ou des avantages exclusifs.</h6>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Faites partie d’une communauté engagée et économisez sur vos achats.</li>
@@ -120,7 +120,7 @@
                             <h3 class="card-title">Coffrets cadeaux personnalisés</h3>
                             <h6 class="card-subtitle mb-2 text-body-secondary">Car en plus de vous faire plaisir,faite plaisir a vos proches</h6>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"> Des coffrets cadeaux sur mesure pour différentes occasions (anniversaires, fêtes, événements d'entreprise) pour répondre aux besoins spécifiques de vos proches. </li>
+                                <li class="list-group-item"> Des coffrets cadeaux sur mesure pour différentes occasions pour répondre aux besoins spécifiques de vos proches. </li>
                                 <li class="list-group-item">Ces coffrets peuvent inclure une sélection de produits de la boutique, des conseils personnalisés, et des messages personnalisés.</li>
                             </ul>
                         </div>
@@ -177,8 +177,8 @@
                     <div class="card text-center mb-3 card2">
                         <div class="card-body">
                             <h3 class="card-title">Crèmes</h3>
+                            <img class="img-fluid" src="{{ asset('build/img/prod-creme.jpg') }}" alt="">
                             <p class="card-text">À partir de 10€</p>
-                            <img class="img_offres img-fluid" src="{{ asset('build/img/prod-creme.jpg') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -186,8 +186,9 @@
                     <div class="card text-center mb-3 card2">
                         <div class="card-body">
                             <h3 class="card-title">Bougies Parfumée</h3>
-                            <p class="card-text">À partir de 7€ </p>
-                            <img class="img_offres img-fluid" src="{{ asset('build/img/prod-bougie.jpg') }}" alt="">
+                            <img class=" img-fluid" src="{{ asset('build/img/prod-bougie.jpg') }}" alt="">
+                                                        <p class="card-text">À partir de 7€ </p>
+
                         </div>
                     </div>
                 </div>
@@ -195,13 +196,17 @@
                     <div class="card text-center mb-3 card2">
                         <div class="card-body">
                             <h3 class="card-title">Diffuseurs</h3>
-                            <p class="card-text">À partir de 50€ </p>
-                            <img class="img_offres img-fluid" src="{{ asset('build/img/prod-diffuseur.jpg') }}" alt="">
+                            <img class="img-fluid" src="{{ asset('build/img/prod-diffuseur.jpg') }}" alt="">
+                                                        <p class="card-text">À partir de 50€ </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="text-center mt-5  bouton_container">
+            <a href="{{ path('app_produit_index') }}" class="btn btn-info text-light text-center bouton_co" >Découvrez tous nos produits !</a>
+        </div>
 
 
 
@@ -212,37 +217,36 @@
                 <div class="col-md-3">
                     <div class="card text-center mb-3 card4">
                         <div class="card-body">
-                            <h3 class="card-title">Réservez en ligne</h3>
-                            <p class="card-text">Choisissez votre service et votre véhicule sur notre site ou notre application. </p>
-                            <img class="img_why" src="{{ asset('build/img/online.png') }}"  alt="">
+                            <h3 class="card-title">Identifiez vos Besoins</h3>
+                            <p class="card-text">Que recherchez-vous ? Relaxation, énergie, soins naturels ? Explorez nos catégories de produits pour identifier ce qui vous attire </p>
+                            <img class="img_why" src="{{ asset('build/img/identifiez.png') }}"  alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card text-center mb-3 card4">
                         <div class="card-body">
-                            <h3 class="card-title">Prenez le volant</h3>
-                            <p class="card-text">Récupérez le véhicule à l’un de nos points ou auprès d’un particulier.</p>
-                            <img class="img_why"  src="{{ asset('build/img/volant.png') }}" alt="">
+                            <h3 class="card-title">Explorez et Découvrez</h3>
+                            <p class="card-text">Avec nos produits , découvrez les ingrédients et leurs bienfaits. N'hésitez pas à nous contacter pour en savoir plus.</p>
+                            <img class="img_why"  src="{{ asset('build/img/explorez.png') }}" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card text-center mb-3 card4">
                         <div class="card-body">
-                            <h3 class="card-title">Roulez en toute sérénité</h3>
-                            <p class="card-text">Profitez d’un véhicule fiable et entretenu pour vos
-                                déplacements.</p>
-                                <img class="img_why" src="{{ asset('build/img/sereniter.png') }}" alt="">
+                            <h3 class="card-title"> Sélectionnez et Profitez</h3>
+                            <p class="card-text">Achetez vos produits et profitez de nos options de paiement sécurisées et de notre service client réactif en cas de besoin.</p>
+                                <img class="img_why" src="{{ asset('build/img/selectionnez.png') }}" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card text-center mb-3 card4">
                         <div class="card-body">
-                            <h3 class="card-title">Restituez facilement</h3>
-                            <p class="card-text">Déposez le véhicule au point convenu, en toute simplicité.</p>
-                            <img class="img_why" src="{{ asset('build/img/restituer.png') }}" alt="">
+                            <h3 class="card-title">Intégrez et Suivez</h3>
+                            <p class="card-text">Profitez de vos produits et commencez votre voyage vers le bien-être. Suivez nos conseils d'utilisation et observez les résultats</p>
+                            <img class="img_why" src="{{ asset('build/img/suivez.png') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -256,16 +260,20 @@
                 <div class="col-md-6">
                     <div class="card text-center mb-3">
                         <div class="card-body">
-                            <p class="card-text">"Excellent service ! Voiture impeccable et personnel très sympathique. Je recommande vivement WeDriveUs."</p>
-                            <p class="card-text"> - Jean</p>
+                            <p class="card-text">"Je suis absolument ravie de mon expérience chez Zen&Aroma ! J'ai contacté la boutique pour des conseils sur des huiles 
+                            essentielles pour m'aider à gérer mon stress, et l'équipe a été incroyablement attentive. Ils ont pris le temps de comprendre mes besoins et 
+                            m'ont recommandé des produits qui ont vraiment fait une différence. Je recommande vivement !"</p>
+                            <p class="card-text"> - Marie</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="card text-center mb-3">
                         <div class="card-body">
-                            <p class="card-text">"J'ai loué une voiture familiale pour mes vacances en Guyane. La réservation en ligne était très facile et le prix était très compétitif."</p>
-                            <p class="card-text"> - Marie</p>
+                            <p class="card-text">"J'ai offert un massage aux huiles essentielles de Zen&Aroma à ma mère pour son anniversaire, et elle a adoré ! Elle m'a dit 
+                            que c'était le meilleur massage qu'elle ait jamais eu. L'équipe est très professionnelle et chaleureuse, et on sent qu'ils utilisent des produits 
+                            de qualité. Je n'hésiterai pas à revenir pour moi-même cette fois !"</p>
+                            <p class="card-text"> - Marc</p>
                         </div>
                     </div>
                 </div>
@@ -273,24 +281,19 @@
         </section>
 
         <section class="container mt-5 end">
-            <h1 class="text-center mt-5 text titre">Prêt à prendre la route avec WeDrivUs ?</h1> 
-        <p class="text-center lead text ">N’attendez plus pour découvrir la liberté de mouvement que WeDrivus peut vous
-            offrir. Que ce soit pour une escapade rapide, un besoin professionnel ou des vacances
-            en Guyane, WeDrivus est votre solution idéale. <br>
-            Avec WeDrivus, partez à la découverte des paysages uniques, de la faune exotique et de la flore typique de la Guyane. Profitez d’une mobilité simple et pratique pour explorer tout ce que ce territoire exceptionnel a à offrir. 
-            <br>
-            Réservez dès maintenant et vivez une expérience de location fluide, rapide et sans contrainte.
-        </p>
+            <h1 class="text-center mt-5 text titre">Prêt à vivre une expérience de bien-être unique avec Zen & Aroma ?</h1> 
+        <p class="text-center lead text ">
+Vous avez des questions sur nos massages aux huiles essentielles, nos ateliers de méditation ou nos gammes de produits bio ?<br> 
+Vous souhaitez organiser un événement bien-être sur mesure pour votre entreprise ou vos amis ? <br>
+Contactez-nous dès maintenant !        </p>
 
         
         </section>
 
 
-        <div class="text-center mt-5 bouton_container1 ">
-
-        </div>
-        <div class="text-center mt-5  bouton_container2">
-            <button type="button" class="btn btn-info text-light bouton_co" onclick="window.location.href = 'https://rentalys247.com/';">Contacter-nous !</button>
+        
+        <div class="text-center mt-5  bouton_container">
+            <a href="{{ path('app_contact_new') }}" class="btn btn-info text-light text-center bouton_co" >Contacter-nous !</a>
         </div>
 
     </main>
@@ -303,7 +306,7 @@
 
         
     <footer class="bg-info text-light text-center py-3 mt-5 container_footer">
-        <p>&copy; 2025 WeDriveUs</p>
+        <p>&copy; 2025 Zen & Aroma</p>
         <p>
             <a href="{{ path('app_contact_new') }}" class="text-light">Contactez-Nous</a> | 
             <a href="{{ path('app_apropos') }}" class="text-light">A propos</a>

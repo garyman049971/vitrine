@@ -14,7 +14,13 @@ body{
     
 }
 
+.navbar{
+    background-color: greenyellow;
+}
+
 .nav_a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
     transition: transform 700ms;
     &:hover {
         transform: scale(1.06);
@@ -100,10 +106,7 @@ p{
     
 }
 
-.img_offres{
-    height: 120px;
-    width: 200px;
-}
+
 
 .img_why{
     height: 50px;
@@ -134,21 +137,23 @@ p{
     width: 250px;
 }
 
-.bouton_container1{
-padding-top: 1em;
-}
 
-.bouton_container2{
+.bouton_container{
 padding-bottom: 1em;
 }
 
 .bouton_co{
-    min-height: 50px;
+    padding-top: 1vh;
+    min-height: 40px;
     min-width: 200px;
+    
+
 }
 
+
+
 .container_footer{
-    background-color: white;
+    background-color: greenyellow;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -10,4 +10,6 @@ import './styles/app.css';
 import'./styles/apropos.css';
 import'./styles/acceuil.css';
 import'./styles/produits.css';
+import'./styles/contact.css';
+
 console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');

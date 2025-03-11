@@ -1,27 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Contact{% endblock %}
+{% block title %}Contact{% endblock %}
+
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
 
 {% block body %}
-    <h1>Create new Contact</h1>
+    <h1 class="text-center">Formulaire de contact</h1>
 
-    {# {{ include('contact/_form.html.twig') }} #}
 
-    {{ form(form, {'method': 'GET'}) }}
+    {{ include('contact/_form.html.twig') }}
 
-    {{ form_row(form.Nom) }}
 
-    {{ form_row(form.Prenom) }}
-
-    {{ form_row(form.Telephone) }}
-
-    {{ form_row(form.Email) }}
-
-    {{ form_row(form.Sujet) }}
-
-    {{ form_row(form.Message) }}
-
-    {{ form_end(form) }}
-
-    <a href="{{ path('app_contact_index') }}">back to list</a>
+    <a href="{{ path('app_contact_index') }}">Retour</a>
 {% endblock %}
