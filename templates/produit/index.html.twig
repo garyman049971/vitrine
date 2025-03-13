@@ -19,9 +19,9 @@
         {% for product in products %}
             <tr>
                 <td>{{ product.id }}</td>
-                <td>{{ product.Photo }}</td>
-                <td>{{ product.Name }}</td>
-                <td>{{ product.Price }}</td>
+                <td><img src="{{ vich_uploader_asset(product) }}" alt="{{ product.name }}" width="200px"></td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
                 <td>
                     <a href="{{ path('app_produit_show', {'id': product.id}) }}">show</a>
                     <a href="{{ path('app_produit_edit', {'id': product.id}) }}">edit</a>

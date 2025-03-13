@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>{% block title %}Zen & Aroma{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        
+
         {% block stylesheets %}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('build/css/apropos.css') }}">
@@ -37,26 +37,26 @@
         {% block body %}
 
         <header class="container header ">
-        
+
 
         <div class="container_text container text-center">
-            <h1 class="text-center mt-5 text titre">Bienvenue chez Zen & Aroma :</h1> 
+            <h1 class="text-center mt-5 text titre">Bienvenue chez Zen & Aroma :</h1>
         <h2 class="text-center lead text titre">Votre solution de Bien-etre en Guadeloupe</h2>
         </div>
-        
+
     </header>
 
 
     <main class="main-light">
 
         <section class="container-fluid text-center">
-            
-            
+
+
             <div class="container text-center">
                 <div class="row">
                     <div class="col">
-                        <p class="text_hero container-fluid">Bienvenue dans l'univers apaisant de Zen & Aroma, où la nature et le bien-être se rencontrent pour créer 
-                        une harmonie parfaite. Nous sommes passionnés par l'idée de vous offrir des produits naturels et authentiques, conçus pour vous accompagner 
+                        <p class="text_hero container-fluid">Bienvenue dans l'univers apaisant de Zen & Aroma, où la nature et le bien-être se rencontrent pour créer
+                        une harmonie parfaite. Nous sommes passionnés par l'idée de vous offrir des produits naturels et authentiques, conçus pour vous accompagner
                         dans votre quête d'équilibre et de sérénité.
                         </p>
                     </div>
@@ -82,12 +82,12 @@
                                 <li class="list-group-item">Flexibilité totale : Disponible 24/7, parfait pour les déplacements spontanés.</li>
                                 <li class="list-group-item">Praticité : Une solution rapide,sans contrainte administrative.</li>
                             </ul>
-                            
+
                         </div>
                     </div>
                 </div>
 
-                
+
 
 
                 <div class="col-md-3">
@@ -167,42 +167,37 @@
                 </div>
 
                 <p class="text-center">Nos points de service vous permettent de louer et restituer facilement votre véhicule, où que vous soyez en Guyane.</p>
-    
+
         </section>
+
+
+
+
+
 
         <section class="container text-center ">
             <h2 class="text-center text titre">Nos produits les plus vendues</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card text-center mb-3 card2">
-                        <div class="card-body">
-                            <h3 class="card-title">Crèmes</h3>
-                            <img class="img-fluid" src="{{ asset('build/img/prod-creme.jpg') }}" alt="">
-                            <p class="card-text">À partir de 10€</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card text-center mb-3 card2">
-                        <div class="card-body">
-                            <h3 class="card-title">Bougies Parfumée</h3>
-                            <img class=" img-fluid" src="{{ asset('build/img/prod-bougie.jpg') }}" alt="">
-                                                        <p class="card-text">À partir de 7€ </p>
 
-                        </div>
-                    </div>
-                </div>
+
+
+            <div class="row">
+                {% for product in featuredProducts %}
                 <div class="col-md-4">
                     <div class="card text-center mb-3 card2">
                         <div class="card-body">
-                            <h3 class="card-title">Diffuseurs</h3>
-                            <img class="img-fluid" src="{{ asset('build/img/prod-diffuseur.jpg') }}" alt="">
-                                                        <p class="card-text">À partir de 50€ </p>
+                            <h3 class="card-title">{{ product.name }}</h3>
+                            <img class="img-fluid" src="{{ vich_uploader_asset(product) }}" alt="{{ product.name }}">
+                            <p class="card-text">À partir de {{ product.price }}€</p>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </section>
+
+
+
+
 
         <div class="text-center mt-5  bouton_container">
             <a href="{{ path('app_produit_index') }}" class="btn btn-info text-light text-center bouton_co" >Découvrez tous nos produits !</a>
@@ -260,8 +255,8 @@
                 <div class="col-md-6">
                     <div class="card text-center mb-3">
                         <div class="card-body">
-                            <p class="card-text">"Je suis absolument ravie de mon expérience chez Zen&Aroma ! J'ai contacté la boutique pour des conseils sur des huiles 
-                            essentielles pour m'aider à gérer mon stress, et l'équipe a été incroyablement attentive. Ils ont pris le temps de comprendre mes besoins et 
+                            <p class="card-text">"Je suis absolument ravie de mon expérience chez Zen&Aroma ! J'ai contacté la boutique pour des conseils sur des huiles
+                            essentielles pour m'aider à gérer mon stress, et l'équipe a été incroyablement attentive. Ils ont pris le temps de comprendre mes besoins et
                             m'ont recommandé des produits qui ont vraiment fait une différence. Je recommande vivement !"</p>
                             <p class="card-text"> - Marie</p>
                         </div>
@@ -270,8 +265,8 @@
                 <div class="col-md-6">
                     <div class="card text-center mb-3">
                         <div class="card-body">
-                            <p class="card-text">"J'ai offert un massage aux huiles essentielles de Zen&Aroma à ma mère pour son anniversaire, et elle a adoré ! Elle m'a dit 
-                            que c'était le meilleur massage qu'elle ait jamais eu. L'équipe est très professionnelle et chaleureuse, et on sent qu'ils utilisent des produits 
+                            <p class="card-text">"J'ai offert un massage aux huiles essentielles de Zen&Aroma à ma mère pour son anniversaire, et elle a adoré ! Elle m'a dit
+                            que c'était le meilleur massage qu'elle ait jamais eu. L'équipe est très professionnelle et chaleureuse, et on sent qu'ils utilisent des produits
                             de qualité. Je n'hésiterai pas à revenir pour moi-même cette fois !"</p>
                             <p class="card-text"> - Marc</p>
                         </div>
@@ -281,17 +276,17 @@
         </section>
 
         <section class="container mt-5 end">
-            <h1 class="text-center mt-5 text titre">Prêt à vivre une expérience de bien-être unique avec Zen & Aroma ?</h1> 
+            <h1 class="text-center mt-5 text titre">Prêt à vivre une expérience de bien-être unique avec Zen & Aroma ?</h1>
         <p class="text-center lead text ">
-Vous avez des questions sur nos massages aux huiles essentielles, nos ateliers de méditation ou nos gammes de produits bio ?<br> 
+Vous avez des questions sur nos massages aux huiles essentielles, nos ateliers de méditation ou nos gammes de produits bio ?<br>
 Vous souhaitez organiser un événement bien-être sur mesure pour votre entreprise ou vos amis ? <br>
 Contactez-nous dès maintenant !        </p>
 
-        
+
         </section>
 
 
-        
+
         <div class="text-center mt-5  bouton_container">
             <a href="{{ path('app_contact_new') }}" class="btn btn-info text-light text-center bouton_co" >Contacter-nous !</a>
         </div>
@@ -304,18 +299,18 @@ Contactez-nous dès maintenant !        </p>
 
         {% block footer %}
 
-        
+
     <footer class="bg-info text-light text-center py-3 mt-5 container_footer">
         <p>&copy; 2025 Zen & Aroma</p>
         <p>
-            <a href="{{ path('app_contact_new') }}" class="text-light">Contactez-Nous</a> | 
+            <a href="{{ path('app_contact_new') }}" class="text-light">Contactez-Nous</a> |
             <a href="{{ path('app_apropos') }}" class="text-light">A propos</a>
         </p>
     </footer>
 
         {% endblock %}
 
-    
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
