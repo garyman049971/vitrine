@@ -1,8 +1,11 @@
 {{ form_start(form) }}
-{{ form_errors(form) }}
+
+<div class="row">
+    <div class="col"{{ form_row(form.Prenom) }}
+    <div class="col"{{ form_row(form.Nom) }}
+</div>
+
     {# {{ form_widget(form) }} #}
-{{ form_row(form.Nom) }}
-{{ form_row(form.Prenom) }}
 {{ form_row(form.Telephone) }}
 {{ form_row(form.Email) }}
 {{ form_row(form.Sujet) }}

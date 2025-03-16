@@ -39,7 +39,7 @@ header{
     flex-direction: row;
 }
 
-.container_logo{
+/* .container_logo{
 height: 100px;
 width: 100px;
 margin-top: 1rem;
@@ -48,7 +48,7 @@ margin-top: 1rem;
 .container_text{
 height: auto;
 width: auto;
-}
+} */
 
 .logo{
     height: 100px;
@@ -89,20 +89,22 @@ p{
 }
 
 .card1{
-    min-height: 460px;
-
+    min-height: 450px;
+    max-height: 500px;
+    overflow: auto;
 }
 
 
 
-.card3{
-    min-height: 250px;
-    
+.card2{
+    min-height: 450px;
+    max-height: 500px;
+    overflow: auto;    
 
 }
 
 .card4{
-    min-height: 250px;
+    min-height: 300px;
     
 }
 

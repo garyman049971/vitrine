@@ -21,10 +21,10 @@ class Product
     private ?File $file = null;
 
     #[ORM\Column(name: 'updatedAt', type: 'datetime_immutable')]
-    protected ?\DateTimeImmutable $updatedAt;
+    protected ?\DateTimeImmutable $updatedAt = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $fileName;
+    private ?string $fileName = null;
 
     #[ORM\Column(length: 125)]
     private ?string $name = null;

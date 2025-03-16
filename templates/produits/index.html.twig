@@ -10,15 +10,14 @@
 
 
     <section class="container text-center ">
-        <h2 class="text-center text titre">Pour le corps et le visage</h2>
         <div class="row">
 
 
-           {% for product in products %}
+        {% for product in products %}
             <div class="col-md-4">
-                <div class="card text-center mb-3 card2">
+                <div class="card text-center mb-3 card_produits">
                     <div class="card-body">
-                        <img class="img_offres img-fluid" src="{{ vich_uploader_asset(product) }}" alt="{{ product.name }}">
+                        <img class="img_offres img-fluid photo_prod" src="{{ vich_uploader_asset(product) }}" alt="{{ product.name }}">
                         <h3 class="card-title">{{ product.name }}</h3>
                         <p class="card-text">À partir de {{ product.price }}€</p>
                     </div>
@@ -26,130 +25,10 @@
             </div>
             {% endfor %}
 
-
-            <div class="col-md-4">
-                <div class="card text-center mb-3 card2">
-                    <div class="card-body">
-                        <img class="img_offres img-fluid" src="{{ asset('build/img/prod-savon.jpg') }}" alt="">
-                        <h3 class="card-title">Savons naturels</h3>
-                        <p class="card-text">À partir de 3€</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center mb-3 card2">
-                    <div class="card-body">
-                        <img class="img_offres img-fluid" src="{{ asset('build/img/prod-creme.jpg') }}" alt="">
-                        <h3 class="card-title">Crème et baumes</h3>
-                        <p class="card-text">À partir de 10€</p>
-
-                    </div>
-                </div>
-            </div>
         </div>
 
-        <h2 class="text-center text titre">Pour la relaxation</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card text-center mb-3 card2">
-                    <div class="card-body">
-                        <img class="img_offres img-fluid" src="{{ asset('build/img/prod-bougie.jpg') }}" alt="">
-                        <h3 class="card-title">Bougies parfumées</h3>
-                        <p class="card-text">À partir de 7€</p>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center mb-3 card2">
-                    <div class="card-body">
-                        <img class="img_offres img-fluid" src="{{ asset('build/img/prod-coussin.jpg') }}" alt="">
-                        <h3 class="card-title">Coussins de méditation</h3>
-                        <p class="card-text">À partir de 15€</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center mb-3 card2">
-                    <div class="card-body">
-                        <img class="img_offres img-fluid" src="{{ asset('build/img/prod-diffuseur.jpg') }}" alt="">
-                        <h3 class="card-title">Diffuseurs d'huiles essentielles</h3>
-                        <p class="card-text">À partir de 50€ </p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="text-center text titre">Compléments alimentaires</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card text-center mb-3 card2">
-                    <div class="card-body">
-                        <img class="img_offres img-fluid" src="{{ asset('build/img/prod-vitamines.jpg') }}" alt="">
-                        <h3 class="card-title">Vitamines</h3>
-                        <p class="card-text">À partir de 5€ </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center mb-3 card2">
-                    <div class="card-body">
-                        <img class="img_offres img-fluid" src="{{ asset('build/img/prod-probiotiques.jpg') }}" alt="">
-                        <h3 class="card-title">Probiotiques</h3>
-                        <p class="card-text">À partir de 10€ </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center mb-3 card2">
-                    <div class="card-body">
-                        <img class="img_offres img-fluid" src="{{ asset('build/img/prod-plantes.jpg') }}" alt="">
-                        <h3 class="card-title">Plantes médicinales</h3>
-                        <p class="card-text">À partir de 5€ </p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="text-center text titre">Pour la maison</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card text-center mb-3 card2">
-                    <div class="card-body">
-                        <img class="img_offres img-fluid" src="{{ asset('build/img/prod-huile.jpg') }}" alt="">
-                        <h3 class="card-title">Encens</h3>
-                        <p class="card-text">À partir de 3€</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center mb-3 card2">
-                    <div class="card-body">
-                        <img class="img_offres img-fluid" src="{{ asset('build/img/prod-huile.jpg') }}" alt="">
-                        <h3 class="card-title">Thé et Tisane</h3>
-                        <p class="card-text">À partir de 8€ </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card text-center mb-3 card2">
-                    <div class="card-body">
-                        <img class="img_offres img-fluid" src="{{ asset('build/img/prod-huile.jpg') }}" alt="">
-                        <h3 class="card-title">Livres de Méditations</h3>
-                        <p class="card-text">À partir de 25€ par jour</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
     </section>
 {% endblock %}

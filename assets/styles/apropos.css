@@ -1,3 +1,9 @@
-img_hero{
+.img_hero{
     margin-top: 1em;
+}
+
+.card_propos{
+    min-height: 250px;
+    max-height: 300px;
+    overflow: auto;
 }

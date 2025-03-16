@@ -1,6 +1,265 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AcceuilController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 
 
+{% block body %}
+
+ <header class="container header ">
+
+
+        <div class="container_text container text-center">
+            <h1 class="text-center mt-5 text titre">Bienvenue chez Zen & Aroma :</h1>
+        <h2 class="text-center lead text titre">Votre solution de Bien-etre en Guadeloupe</h2>
+        </div>
+
+    </header>
+
+
+    <main class="main-light">
+
+        <section class="container-fluid text-center">
+
+
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <p class="text_hero container-fluid">Bienvenue dans l'univers apaisant de Zen & Aroma, où la nature et le bien-être se rencontrent pour créer
+                        une harmonie parfaite. Nous sommes passionnés par l'idée de vous offrir des produits naturels et authentiques, conçus pour vous accompagner
+                        dans votre quête d'équilibre et de sérénité.
+                        </p>
+                    </div>
+                    <div class="col col2">
+                        <img src="{{ asset('build/img/home-hero2.jpg') }}" class="rounded float-end img-fluid img" alt="...">
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="container mt-5 services">
+            <h2 class="text-center text titre">Nos services Bien-etre : Une expérience sur mesure</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card1">
+                        <div class="card-body">
+                            <h3 class="card-title">Conseils personnalisés</h3>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Avec Zen & Aroma, demandez des infos à tout moment, sans passer dans une boutique.</h6>
+                            <ul class=" list-group list-group-flush ">
+                                <li class="list-group-item">Un personnel qualifié pour fournir des conseils sur les produits les mieux adaptés aux besoins de chaque client.</li>
+                                <li class="list-group-item">Flexibilité totale : Disponible 24/7, parfait pour les déplacements spontanés.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card1">
+                        <div class="card-body">
+                            <h3 class="card-title">Ateliers et cours de bien-être</h3>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Des ateliers thématiques peuvent être organisés pour enseigner aux clients comment:</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">utiliser les huiles essentielles, fabriquer des produits de soins naturels.</li>
+                                <li class="list-group-item">pratiquer la méditation et le yoga.</li>
+                            </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card1">
+                        <div class="card-body">
+                            <h3 class="card-title">Programme de fidélité </h3>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Nous avons misen place un programme de fidélité récompensant les clients réguliers avec des réductions, des cadeaux ou des avantages exclusifs.</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Faites partie d’une communauté engagée et économisez sur vos achats.</li>
+                                <li class="list-group-item">Parrainez une personne pour la faire profités de Bonus</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card1">
+                        <div class="card-body">
+                            <h3 class="card-title">Coffrets cadeaux personnalisés</h3>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Car en plus de vous faire plaisir,faite plaisir a vos proches</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"> Des coffrets cadeaux sur mesure pour différentes occasions pour répondre aux besoins spécifiques de vos proches. </li>
+                                <li class="list-group-item">Ces coffrets peuvent inclure une sélection de produits de la boutique, des conseils personnalisés, et des messages personnalisés.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid mt-5 text-center section_local">
+            <h1 class="text-center mt-5 text titre">Emplacement de nos boutiques : Une présence locale adaptée en Guadeloupe </h1>
+            <p class="text-center">Zen & Aroma est fier de vous offrir une accessibilité optimale grâce à ses nombreuses
+                boutiques dans toutes la guadeloupe:</p>
+
+                <div class="container container_list">
+                    <ul class="list-group list-group-horizontal-md list_local">
+                        <li class="list-group-item">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                                                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                                        </svg>Pointe-à-Pitre :</li>
+                        <li class="list-group-item">Le cœur vibrant de la Guadeloupe, idéal pour vos besoins urbains.</li>
+                    </ul>
+                    <ul class="list-group list-group-horizontal-md list_local">
+                        <li class="list-group-item">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                                                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                                        </svg>Basse-Terre :</li>
+                        <li class="list-group-item">Parfait pour explorer le centre spatial et ses environs.</li>
+                    </ul>
+                    <ul class="list-group list-group-horizontal-md list_local">
+                        <li class="list-group-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                          </svg>Saint-François :</li>
+                        <li class="list-group-item"> Une porte d’entrée vers les richesses culturelles
+                            de l’Ouest</li>
+                    </ul>
+                    <ul class="list-group list-group-horizontal-md list_local">
+                        <li class="list-group-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                          </svg>Petit-Bourg :</li>
+                        <li class="list-group-item"> Un point stratégique pour vos escapades plus paisibles.</li>
+                    </ul>
+                </div>
+
+                <p class="text-center">Nos points de service vous permettent de louer et restituer facilement votre véhicule, où que vous soyez en Guyane.</p>
+
+        </section>
+
+
+
+
+
+
+        <section class="container text-center ">
+            <h2 class="text-center text titre">Nos produits les plus vendues</h2>
+
+
+
+            <div class="row">
+                {% for product in featuredProducts %}
+                <div class="col-md-4">
+                    <div class="card text-center mb-3 card_produits">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ product.name }}</h3>
+                            <img class="img-fluid photo_prod" src="{{ vich_uploader_asset(product) }}" alt="{{ product.name }}">
+                            <p class="card-text">À partir de {{ product.price }}€</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+
+
+
+
+        <div class="text-center mt-5  bouton_container">
+            <a href="{{ path('app_produit_index') }}" class="btn btn-info text-light text-center bouton_co" >Découvrez tous nos produits !</a>
+        </div>
+
+
+
+
+        <section class="container mt-5">
+            <h2 class="text-center text titre">Comment ça marche ?</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card2">
+                        <div class="card-body">
+                            <h3 class="card-title">Identifiez vos Besoins</h3>
+                            <p class="card-text">Que recherchez-vous ? Relaxation ou soins naturels ? Explorez nos catégories de produits pour voir ce qui vous attire </p>
+                            <img class="img_why" src="{{ asset('build/img/identifiez.png') }}"  alt="">
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card2">
+                        <div class="card-body">
+                            <h3 class="card-title">Explorez et Découvrez</h3>
+                            <p class="card-text">Avec nos produits , découvrez les ingrédients et leurs bienfaits. N'hésitez pas à nous contacter pour en savoir plus.</p>
+                            <img class="img_why"  src="{{ asset('build/img/explorez.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card2">
+                        <div class="card-body">
+                            <h3 class="card-title"> Sélectionnez et Profitez</h3>
+                            <p class="card-text">Achetez vos produits et profitez de nos options de paiement sécurisées et de notre service client réactif en cas de besoin.</p>
+                                <img class="img_why" src="{{ asset('build/img/selectionnez.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center mb-3 card2">
+                        <div class="card-body">
+                            <h3 class="card-title">Intégrez et Suivez</h3>
+                            <p class="card-text">Profitez de vos produits et commencez votre voyage vers le bien-être. Suivez nos conseils d'utilisation et observez les résultats garanties</p>
+                            <img class="img_why" src="{{ asset('build/img/suivez.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="container mt-5">
+            <h2 class="text-center text">Ce que disent nos clients</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card text-center mb-3">
+                        <div class="card-body">
+                            <p class="card-text">"Je suis absolument ravie de mon expérience chez Zen&Aroma ! J'ai contacté la boutique pour des conseils sur des huiles
+                            essentielles pour m'aider à gérer mon stress, et l'équipe a été incroyablement attentive. Ils ont pris le temps de comprendre mes besoins et
+                            m'ont recommandé des produits qui ont vraiment fait une différence."</p>
+                            <p class="card-text"> - Marie</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-center mb-3">
+                        <div class="card-body">
+                            <p class="card-text">"J'ai offert un massage aux huiles essentielles de Zen&Aroma à ma mère pour son anniversaire, et elle a adoré ! Elle m'a dit
+                            que c'était le meilleur massage qu'elle ait jamais eu. L'équipe est très professionnelle et chaleureuse, et on sent qu'ils utilisent des produits
+                            de qualité. Je n'hésiterai pas à revenir pour moi-même cette fois !"</p>
+                            <p class="card-text"> - Marc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mt-5 end">
+            <h1 class="text-center mt-5 text titre">Prêt à vivre une expérience de bien-être unique avec Zen & Aroma ?</h1>
+        <p class="text-center lead text ">
+Vous avez des questions sur nos massages aux huiles essentielles, nos ateliers de méditation ou nos gammes de produits bio ?<br>
+Vous souhaitez organiser un événement bien-être sur mesure pour votre entreprise ou vos amis ? <br>
+Contactez-nous dès maintenant !        </p>
+
+
+        </section>
+
+
+
+        <div class="text-center mt-5  bouton_container">
+            <a href="{{ path('app_contact_new') }}" class="btn btn-info text-light text-center bouton_co" >Contacter-nous !</a>
+        </div>
+
+    </main>
+
+{% endblock %}

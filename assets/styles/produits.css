@@ -1,0 +1,9 @@
+.card_produits{
+    min-height: 450px;
+    max-height: 550px;
+}
+
+.photo_prod{
+    max-height: 450px;
+    overflow: hidden;
+}
