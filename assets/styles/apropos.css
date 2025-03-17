@@ -3,7 +3,7 @@
 }
 
 .card_propos{
-    min-height: 250px;
+    min-height: 300px;
     max-height: 300px;
     overflow: auto;
 }
